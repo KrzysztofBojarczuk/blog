@@ -34,6 +34,22 @@ namespace blogWebApi.Repositories
             return post;
         }
 
+
+        public async Task<Comment> DeletePostCommentAsync(int postId, int commentId)
+        {
+            var comment = await _ctx.Comments.SingleOrDefaultAsync(r => r.CommentId == commentId && r.PostId == postId);
+
+            if (comment == null)
+            {
+                return null;
+            }
+
+            _ctx.Comments.Remove(comment);
+
+            await _ctx.SaveChangesAsync();
+
+            return comment;
+        }
         public async Task<List<Post>> GetAllPostsAsync()
         {
             return await _ctx.Posts.ToListAsync();
@@ -98,21 +114,6 @@ namespace blogWebApi.Repositories
             return updatedComment;
         }
 
-        public async Task<Comment> DeletePostCommentAsync(int postId, int commentId)
-        {
-            var comment = await _ctx.Comments.SingleOrDefaultAsync(r => r.CommentId == postId && r.PostId == postId);
-
-            if (comment == null)
-            {
-                return null;
-            }
-
-            _ctx.Comments.Remove(comment);
-
-            await _ctx.SaveChangesAsync();
-
-            return comment;
-        }
 
 
         public async Task<Comment> GetPostCommentByIdAsync(int postId, int commentId)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+jiVcwZD4yjKyrmP+BcJPjXniz9J2ZmW04Vnfki5byA9/mh1qmdUV0FayVXUMMvMqsBWEqCTBvy7mxTfzHt2pg==",
+  "dgSpecHash": "Ji+9pa4S79UC6W7CuA5ScBJDwTV0k72iTsibwLFa31Uk9/LnJ89E3hls3SOX+z/1peX0foBvzDLIPx2CBi5JCQ==",
   "success": true,
-  "projectFilePath": "E:\\Projects\\Blog\\blogWebApi\\blogWebApi\\blogWebApi.csproj",
+  "projectFilePath": "E:\\Projects\\blog\\blogWebApi\\blogWebApi\\blogWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\krzys\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\krzys\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
