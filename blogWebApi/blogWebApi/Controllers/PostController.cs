@@ -106,7 +106,7 @@ namespace blogWebApi.Controllers
         public async Task<IActionResult> UpdateCommentRoom(int postId, int commentId, [FromBody] CommentCreateDto updatedComment)
         {
             var toUpdate = _mapper.Map<Comment>(updatedComment);
-            toUpdate.CommentId = postId;
+            toUpdate.CommentId = commentId;
             toUpdate.PostId = postId;
 
             await _postRepository.UpdatePostComment(postId, toUpdate);
